@@ -83,7 +83,7 @@ export default function Timer() {
       // Sudhu jodi orientation change hoy, tobei timer set hobe
       if (newOrientation !== orientation) {
         setOrientation(newOrientation);
-        setRunning(false); // Mode change hole timer pause kora bhalo
+        setRunning(true); // Mode change hole timer pause kora bhalo
 
         if (newOrientation === "portrait") setSecondsLeft(25 * 60);
         else if (newOrientation === "landscape-right") setSecondsLeft(50 * 60);
