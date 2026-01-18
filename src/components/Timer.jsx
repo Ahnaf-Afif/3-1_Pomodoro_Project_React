@@ -101,8 +101,17 @@ export default function Timer() {
   const minutes = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
   const seconds = String(secondsLeft % 60).padStart(2, "0");
 
+  const rotationClasses = {
+    portrait: "rotate-0",
+    "landscape-right": "rotate-90 scale-90", // ডানে ৯০ ডিগ্রি
+    "landscape-left": "-rotate-90 scale-90", // বামে ৯০ ডিগ্রি
+    "upside-down": "rotate-180", // ১৮০ ডিগ্রি উল্টো
+  };
+
   return (
-    <div className="flex-1 flex flex-col items-center justify-center">
+    <div
+      className={`fixed inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out ${rotationClasses[orientation]}`}
+    >
       {/* Bortoman orientation screen e dekhabe (testing er jonno bhalo) */}
       <p className="text-white/50 mb-4 uppercase tracking-widest">
         {orientation}
