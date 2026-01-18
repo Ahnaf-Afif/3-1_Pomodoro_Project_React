@@ -103,8 +103,8 @@ export default function Timer() {
 
   const rotationClasses = {
     portrait: "rotate-0",
-    "landscape-right": "rotate-90 scale-90", // ডানে ৯০ ডিগ্রি
-    "landscape-left": "-rotate-90 scale-90", // বামে ৯০ ডিগ্রি
+    "landscape-right": "-rotate-90 scale-90", // ডানে ৯০ ডিগ্রি
+    "landscape-left": "rotate-90 scale-90", // বামে ৯০ ডিগ্রি
     "upside-down": "rotate-180", // ১৮০ ডিগ্রি উল্টো
   };
 
